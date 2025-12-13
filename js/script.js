@@ -24,7 +24,8 @@ const elRulesModalOpenBtn = document.getElementById("rulesModalOpenBtn");
 const elRulesModalCloseBtn = document.getElementById("rulesModalCloseBtn");
 const elRulesModal = document.getElementById("rulesModal");
 const elRulesImg = document.getElementById("rulesImg");
-const elGameModeChanger = document.getElementById("gameModeChanger")
+const elGameModeChanger = document.getElementById("gameModeChanger");
+const elLogoImg = document.getElementById("logoImg");
 
 let gameMode = "basic";
 
@@ -38,6 +39,8 @@ elGameModeChanger.addEventListener("click",()=>{
         elGameBoxBasic.classList.add("hidden");
         elGameBoxAdvanced.classList.add("flex");
         elRulesImg.src = "/imgs/rule-advanced.svg";
+        elGameModeChanger.textContent="basic";
+        elLogoImg.src="/imgs/tipa-logo-advanced.svg";
         gameModeAdvanced();
     } else if(gameMode=="advanced") {
         gameMode = "basic";
@@ -48,6 +51,8 @@ elGameModeChanger.addEventListener("click",()=>{
         elGameBoxBasic.classList.add("flex");
         elGameBoxAdvanced.classList.add("hidden");
         elRulesImg.src = "/imgs/rule-basic.svg";
+        elGameModeChanger.textContent="advanced";
+        elLogoImg.src="/imgs/tipa-logo.svg";
         gameModeBasic();
     }
 })
