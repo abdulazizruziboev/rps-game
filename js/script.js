@@ -1,5 +1,5 @@
 const elLoader = document.getElementById("loader");
-document.addEventListener("load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
     setTimeout(()=>{
     elLoader.classList.add("transform-[translateY(-100%)]");
     },2000)
