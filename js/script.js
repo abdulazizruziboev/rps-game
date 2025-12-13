@@ -91,27 +91,27 @@ function selectWinner(u,c) {
     if(u==c) {
         return "Tie";
     } /*Durang tugadi*/ 
-    else if (u=="rock"||c=="scissors") {
+    else if (u=="rock"&&c=="scissors") {
         score=score+1/2;
         return "you win";
     }
-    else if (u=="scissors"||c=="rock") {
+    else if (u=="scissors"&&c=="rock") {
         score=score-1/2;
         return "you lose";
     } /* tosh qaychi tugadi */
-    else if (u=="scissors"||c=="paper") {
+    else if (u=="scissors"&&c=="paper") {
         score=score+1/2;
         return "you win";
     }
-    else if (u=="paper"||c=="scissors") {
+    else if (u=="paper"&&c=="scissors") {
         score=score-1/2;
         return "you lose";
     } /* qogoz qaychi tugadi */
-    else if (u=="paper"||c=="rock") {
+    else if (u=="paper"&&c=="rock") {
         score=score+1/2;
         return "you win";
     }
-    else if (u=="rock"||c=="paper") {
+    else if (u=="rock"&&c=="paper") {
         score=score-1/2;
         return "you lose";
     } /* tosh qogoz tugadi */
