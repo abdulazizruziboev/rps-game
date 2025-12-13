@@ -46,10 +46,26 @@
             </div>
         </section>
         <!-- User selection box -->
-        <section id="gameBox" class="grid grid-rows-2 grid-cols-3 gap-y-20 bg-[url('./imgs/triangle.svg')] bg-no-repeat bg-center">
-            <img class="selectBtns cursor-pointer col-start-1 transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative left-10" src="/imgs/paper.svg" alt="paper">
-            <img class="selectBtns cursor-pointer col-start-3 transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative right-10" src="/imgs/scissors.svg" alt="scissors">
-            <img class="selectBtns cursor-pointer col-start-2 transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full row-start-2" src="/imgs/rock.svg" alt="rock">
+        <!-- Basic Game Box -->
+        <section id="gameBoxBasic" class="grid grid-rows-2 grid-cols-3 gap-y-20 bg-[url('./imgs/triangle.svg')] bg-no-repeat bg-center">
+            <img class="selectBtnsBasic cursor-pointer col-start-1 transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative left-10" src="/imgs/paper.svg" alt="paper">
+            <img class="selectBtnsBasic cursor-pointer col-start-3 transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative right-10" src="/imgs/scissors.svg" alt="scissors">
+            <img class="selectBtnsBasic cursor-pointer col-start-2 transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full row-start-2" src="/imgs/rock.svg" alt="rock">
+        </section>
+        <!-- Advanced Game Box -->
+        <section id="gameBoxAdvanced" class="hidden w-full max-w-[700px] items-center flex-col bg-contain bg-[url('./imgs/polygon.svg')] bg-no-repeat bg-center mt-10">
+            <img width="150" height="150" class="selectBtnsAdvanced cursor-pointer transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative top-[-50px]" src="/imgs/paper.svg" alt="paper">
+
+            <div class="flex relative top-[-50px] justify-around gap-x-35 w-full">
+            <img width="150" height="150" class="selectBtnsAdvanced cursor-pointer transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative" src="/imgs/spock.svg" alt="spock">
+            <img width="150" height="150" class="selectBtnsAdvanced cursor-pointer transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full relative" src="/imgs/scissors.svg" alt="scissors">
+            </div>
+
+            <div class="flex relative top-[50px] justify-around px-10 w-full">
+            <img width="150" height="150" class="selectBtnsAdvanced cursor-pointer transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full row-start-2" src="/imgs/lizard.svg" alt="lizard">
+            <img width="150" height="150" class="selectBtnsAdvanced cursor-pointer transition-all duration-300 hover:shadow-[0px_0px_0px_25px_#fff2] rounded-full row-start-2" src="/imgs/rock.svg" alt="rock">
+            </div>
+
         </section>
         <!-- Result box -->
         <section id="resultBox" class="hidden flex-row w-full m-auto gap-x-15 items-center justify-between px-40 transition-all">
@@ -71,7 +87,7 @@
     </main>
     <!-- Rules Modal -->
     <div id="rulesModal" class="hidden justify-center items-center w-full h-full fixed bg-[#0007] z-[2]">
-        <div class="flex flex-col w-[400px] margin h-auto bg-[#e3e3e3] flex justify-around items-center min-h-[400px] px-10 rounded-[15px]">
+        <div class="flex flex-col w-[400px] margin h-auto bg-[#e3e3e3] flex justify-around items-center min-h-[400px] px-10 py-4 rounded-[15px]">
             <div class="flex justify-between items-center h-[25px] w-full" >
     
                 <p class="uppercase text-[30px] leading-none font-bold">
@@ -83,7 +99,7 @@
                 </button>
          
             </div>
-            <img src="/imgs/rule-basic.svg" alt="" aria-hidden="true" class="">
+            <img src="/imgs/rule-basic.svg" alt="" aria-hidden="true" id="rulesImg">
         </div>
     </div>
 
@@ -91,9 +107,9 @@
         <button id="rulesModalOpenBtn" class="font-[Barlow_Semi_Condensed] uppercase text-[20px] text-white border-[2px] border-white cursor-pointer rounded-[15px] w-[150px] h-[48px] transition-all duration-300 font-[550] tracking-[1.5px] hover:text-[#1c2b4c] hover:bg-[#ffffff]">
             rules
         </button>
-        <!-- <button class="font-[Barlow_Semi_Condensed] uppercase text-[20px] text-white border-[2px] border-white cursor-pointer rounded-[15px] w-[150px] h-[48px] transition-all duration-300 font-[550] tracking-[1.5px] hover:text-[#1c2b4c] hover:bg-[#ffffff]">
-            settings
-        </button> -->
+        <button id="gameModeChanger" class="font-[Barlow_Semi_Condensed] uppercase text-[20px] text-white border-[2px] border-white cursor-pointer rounded-[15px] w-[150px] h-[48px] transition-all duration-300 font-[550] tracking-[1.5px] hover:text-[#1c2b4c] hover:bg-[#ffffff]">
+            advanced
+        </button>
     </div>
 
     <script src="/js/script.js"></script>
