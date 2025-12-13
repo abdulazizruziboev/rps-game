@@ -83,10 +83,10 @@ elAgainPlay.addEventListener("click",()=>{setTimeout(()=>{switchBox(false)},400)
 function selectWinner(u,c) {
     if(u==c) {
         return "Tie";
-    } else if (u=="rock"||c=="scissors") {
+    } else if (u=="scissors"||c=="rock") {
         score=score-1/2;
         return "Computer win";
-    } else if (u=="scissors"||c=="rock") {
+    } else if (u=="rock"||c=="scissors") {
         score=score+1/2;
         return "User win";
     } else if (u=="scissors"||c=="paper") {
