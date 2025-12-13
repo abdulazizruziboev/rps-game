@@ -1,3 +1,15 @@
+const elLoader = document.getElementById("loader");
+
+document.addEventListener("DOMContentLoaded",()=>{
+    setTimeout(()=>{
+    elLoader.classList.add("transform-[translateY(-100%)]");
+    },2000)
+    setTimeout(()=>{
+    elLoader.classList.remove("flex");
+    elLoader.classList.add("hidden");
+    },2500)
+});
+
 let elScoreTxt = document.getElementById("scoreTxt");
 const elSelectBtns = document.querySelectorAll(".selectBtns");
 const elGameBox = document.getElementById("gameBox");
