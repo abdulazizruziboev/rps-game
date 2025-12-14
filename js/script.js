@@ -35,6 +35,7 @@ elGameModeChanger.addEventListener("click",()=>{
         setTimeout(()=>{
         elGameModeLoader.classList.remove("opacity-[0]");
         elGameModeLoader.classList.add("opacity-[1]");
+        elGameModeLoader.style.pointerEvents = "all";
         },0)
         setTimeout(()=>{
         elResultBox.classList.remove("flex");
@@ -50,6 +51,7 @@ elGameModeChanger.addEventListener("click",()=>{
         setTimeout(()=>{
         elGameModeLoader.classList.remove("opacity-[1]");
         elGameModeLoader.classList.add("opacity-[0]");
+        elGameModeLoader.style.pointerEvents = "none";
         },2000)
         gameModeAdvanced();
         } else if(gameMode=="advanced") {
@@ -57,6 +59,7 @@ elGameModeChanger.addEventListener("click",()=>{
         setTimeout(()=>{
         elGameModeLoader.classList.remove("opacity-[0]");
         elGameModeLoader.classList.add("opacity-[1]");
+        elGameModeLoader.style.pointerEvents = "all";
         },0)
         setTimeout(()=>{
         elResultBox.classList.remove("flex");
@@ -72,6 +75,7 @@ elGameModeChanger.addEventListener("click",()=>{
         setTimeout(()=>{
         elGameModeLoader.classList.remove("opacity-[1]");
         elGameModeLoader.classList.add("opacity-[0]");
+        elGameModeLoader.style.pointerEvents = "none";
         },2000)
         gameModeBasic();
     }
