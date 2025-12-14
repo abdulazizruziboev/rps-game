@@ -71,7 +71,7 @@ elGameModeChanger.addEventListener("click",()=>{
         },1000)
         setTimeout(()=>{
         elGameModeLoader.classList.remove("opacity-[1]");
-        elGameModeLoader.classList.add("opacity-[]");
+        elGameModeLoader.classList.add("opacity-[0]");
         },2000)
         gameModeBasic();
     }
