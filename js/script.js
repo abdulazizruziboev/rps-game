@@ -26,12 +26,17 @@ const elRulesModal = document.getElementById("rulesModal");
 const elRulesImg = document.getElementById("rulesImg");
 const elGameModeChanger = document.getElementById("gameModeChanger");
 const elLogoImg = document.getElementById("logoImg");
-
+const elGameModeLoader = document.getElementById("gameLoader");
 let gameMode = "basic";
 
 elGameModeChanger.addEventListener("click",()=>{
-    if(gameMode=="basic") {
+        if(gameMode=="basic") {
         gameMode = "advanced";
+        setTimeout(()=>{
+        elGameModeLoader.classList.remove("opacity-[0]");
+        elGameModeLoader.classList.add("opacity-[1]");
+        },0)
+        setTimeout(()=>{
         elResultBox.classList.remove("flex");
         elResultBox.classList.add("hidden");
         elGameBoxBasic.classList.remove("flex");
@@ -41,9 +46,19 @@ elGameModeChanger.addEventListener("click",()=>{
         elRulesImg.src = "/imgs/rule-advanced.svg";
         elGameModeChanger.textContent="basic";
         elLogoImg.src="/imgs/tipa-logo-advanced.svg";
+        },1000);
+        setTimeout(()=>{
+        elGameModeLoader.classList.remove("opacity-[1]");
+        elGameModeLoader.classList.add("opacity-[0]");
+        },2000)
         gameModeAdvanced();
-    } else if(gameMode=="advanced") {
+        } else if(gameMode=="advanced") {
         gameMode = "basic";
+        setTimeout(()=>{
+        elGameModeLoader.classList.remove("opacity-[0]");
+        elGameModeLoader.classList.add("opacity-[1]");
+        },0)
+        setTimeout(()=>{
         elResultBox.classList.remove("flex");
         elResultBox.classList.add("hidden");
         elGameBoxBasic.classList.remove("hidden");
@@ -53,9 +68,14 @@ elGameModeChanger.addEventListener("click",()=>{
         elRulesImg.src = "/imgs/rule-basic.svg";
         elGameModeChanger.textContent="advanced";
         elLogoImg.src="/imgs/tipa-logo.svg";
+        },1000)
+        setTimeout(()=>{
+        elGameModeLoader.classList.remove("opacity-[1]");
+        elGameModeLoader.classList.add("opacity-[]");
+        },2000)
         gameModeBasic();
     }
-})
+});
 
 elSelectBtnsAdvanced.forEach((elBtns)=>{
     elBtns.addEventListener("click",gameModeBasic())
@@ -282,7 +302,8 @@ function selectWinner(u,c) {
     }
     /* lizard tugadi */
     else if (u=="spock" && c=="scissors") {
-        score=score+1/2; return "you win";
+        score=score+1/2;
+        return "you win";
     } 
     else if (u=="scissors" && c=="spock") {
         score=score-1/2;

@@ -16,9 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS | Game</title>
 </head>
-<body class="bg-[#1c2b4c] flex justify-center w-full">
+<body class="bg-[radial-gradient(1200px,#233b60,#0b0e1f)] flex justify-center w-full bg-no-repeat bg-cover h-[100vh]">
 
-    <div id="loader" class="h-full w-full fixed flex justify-center flex-col items-center bg-[#1c2b4c] z-[calc(Infinity)] transition-all duration-500">
+    <div id="loader" class="h-full w-full fixed flex justify-center flex-col items-center bg-[radial-gradient(1200px,#233b60,#0b0e1f)] z-[calc(Infinity)] transition-all duration-500 opacity-[1]">
         <span class="w-[150px] h-[150px] rounded-full flex flex-col justify-around items-center animate-bounce" style="border-top: 10px solid #dd9b30 !important; border: 1px solid #dd9b30;">
             <div class="flex relative mt-[20px] gap-x-12">
                 <span class="w-[12px] h-[24px] bg-[#dd9b30] block rounded-[500%]"></span>
@@ -29,6 +29,19 @@
         </span>
         <span class="text-[25px] font-[Barlow_Semi_Condensed] text-[#dd9b30] uppercase">loaded data</span>
     </div>
+
+    <div id="gameLoader" class="h-full w-full fixed justify-center flex-col items-center bg-[radial-gradient(1200px,#0b0e1f,#233b60)] z-[calc(Infinity)] transition-all duration-500 flex opacity-[0]" style="pointer-events: none;">
+    <span class="w-[150px] h-[150px] rounded-full flex flex-col justify-around items-center animate-bounce" style="border-top: 10px solid #dd9b30 !important; border: 1px solid #dd9b30;">
+            <div class="flex relative mt-[20px] gap-x-12">
+                <span class="w-[12px] h-[24px] bg-[#dd9b30] block rounded-[500%]"></span>
+                <span class="w-[12px] h-[24px] bg-[#dd9b30] block rounded-[500%]"></span>
+            </div>
+            <span class="w-[80px] h-[75px] rounded-full relative mt-[-50px]" style="border-bottom: 10px solid #dd9b30;">
+            </span>
+        </span>
+        <span class="text-[25px] font-[Barlow_Semi_Condensed] text-[#dd9b30] uppercase">please wait</span>
+    </div>
+
 
     <main class="max-w-[1360px] w-full h-auto py-10 flex flex-col items-center w-full gap-y-15">
         <!-- Header -->
